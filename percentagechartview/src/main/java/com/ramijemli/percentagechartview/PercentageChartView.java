@@ -45,6 +45,7 @@ import com.ramijemli.percentagechartview.callback.OnProgressChangeListener;
 import com.ramijemli.percentagechartview.callback.ProgressTextFormatter;
 import com.ramijemli.percentagechartview.renderer.BaseModeRenderer;
 import com.ramijemli.percentagechartview.renderer.FillModeRenderer;
+import com.ramijemli.percentagechartview.renderer.HalfRingModeRenderer;
 import com.ramijemli.percentagechartview.renderer.OffsetEnabledMode;
 import com.ramijemli.percentagechartview.renderer.OrientationBasedMode;
 import com.ramijemli.percentagechartview.renderer.PieModeRenderer;
@@ -53,6 +54,7 @@ import com.ramijemli.percentagechartview.renderer.RingModeRenderer;
 import static com.ramijemli.percentagechartview.renderer.BaseModeRenderer.GRADIENT_LINEAR;
 import static com.ramijemli.percentagechartview.renderer.BaseModeRenderer.GRADIENT_SWEEP;
 import static com.ramijemli.percentagechartview.renderer.BaseModeRenderer.MODE_FILL;
+import static com.ramijemli.percentagechartview.renderer.BaseModeRenderer.MODE_HALFRING;
 import static com.ramijemli.percentagechartview.renderer.BaseModeRenderer.MODE_PIE;
 import static com.ramijemli.percentagechartview.renderer.BaseModeRenderer.MODE_RING;
 import static com.ramijemli.percentagechartview.renderer.BaseModeRenderer.ORIENTATION_CLOCKWISE;
@@ -135,6 +137,10 @@ public class PercentageChartView extends View implements IPercentageChartView {
                 //CHART MODE (DEFAULT PIE MODE)
                 mode = attrs.getInt(R.styleable.PercentageChartView_pcv_mode, MODE_PIE);
                 switch (mode) {
+                    case MODE_HALFRING:
+                        renderer = new HalfRingModeRenderer(this, attrs);
+                        break;
+
                     case MODE_RING:
                         renderer = new RingModeRenderer(this, attrs);
                         break;

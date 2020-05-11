@@ -7,6 +7,7 @@
             <enum name="ring" value="0" />
             <enum name="pie" value="1" />
             <enum name="fill" value="2" />
+            <enum name="halfring" value="3" />
         </attr>
 
         <attr name="pcv_orientation" format="enum">

@@ -64,6 +64,7 @@ public abstract class BaseModeRenderer {
     public static final int MODE_RING = 0;
     public static final int MODE_PIE = 1;
     public static final int MODE_FILL = 2;
+    public static final int MODE_HALFRING = 3;
 
     // ORIENTATION
     public static final int INVALID_ORIENTATION = -1;

@@ -4,6 +4,7 @@
     package="com.ramijemli.sample">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,45 +13,41 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
-        <activity
-            android:name="com.ramijemli.sample.activity.HomeActivity"
-            android:screenOrientation="portrait">
+        <activity android:name=".activity.HalfRingTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.ramijemli.sample.activity.PieActivity"
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".activity.PieActivity"
             android:exported="false" />
-
         <activity
-            android:name="com.ramijemli.sample.activity.FillActivity"
+            android:name=".activity.FillActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="com.ramijemli.sample.activity.RingActivity"
+            android:name=".activity.RingActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="com.ramijemli.sample.activity.AdaptiveColorsActivity"
+            android:name=".activity.AdaptiveColorsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="com.ramijemli.sample.activity.TextFormatterActivity"
+            android:name=".activity.TextFormatterActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
         <activity
-            android:name="com.ramijemli.sample.activity.GradientColorsActivity"
+            android:name=".activity.GradientColorsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-
     </application>
 
 </manifest>
